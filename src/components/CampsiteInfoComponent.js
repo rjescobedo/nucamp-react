@@ -40,16 +40,15 @@ class CampsiteInfo extends React.Component {
       render(props) {
           if (this.props.campsite) {
               return (
-                  <div className="row">
-                      {this.renderCampsite(this.props.campsite)}
-                      {this.renderComments(this.props.campsite.comments)}
+                  <div className="container">
+                    <div className="row">
+                        {this.renderCampsite(this.props.campsite)}
+                        {this.renderComments(this.props.campsite.comments)}
+                    </div>
                   </div>
-              )
-          } else {
-              return (
-                  <div></div>
-              )
-          }
+              );
+          } return <div />;
+              
          
       }
 
